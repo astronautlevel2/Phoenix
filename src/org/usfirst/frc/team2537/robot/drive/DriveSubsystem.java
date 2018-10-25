@@ -12,7 +12,7 @@ public class DriveSubsystem extends Subsystem {
 		this.setDefaultCommand(new DriveCommand());
 	}
 	public void setMotors(double speed) {
-			leftWheel.set(speed);
-			rightWheel.set(speed);
+		leftWheel.set(speed);
+		rightWheel.set(speed);
 	}	
 }
