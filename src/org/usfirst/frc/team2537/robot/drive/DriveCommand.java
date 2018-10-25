@@ -9,7 +9,7 @@ public class DriveCommand extends Command {
 		Robot.driveSys.setMotors(.5); // sets both motors to 50% speed
 	}
 
-	protected boolean isFinished() { return false; // always runs }
+	protected boolean isFinished() { return false; } // always runs
 	
 	protected void end() {
 		Robot.driveSys.setMotors(0);
