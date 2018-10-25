@@ -9,33 +9,9 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class HumanInput {
 
-	public static Joystick leftJoystick = new Joystick(Ports.LEFT_JOYSTICK);
-	public static Joystick rightJoystick = new Joystick(Ports.RIGHT_JOYSTICK);
-	
-	public static Button vertRaiseButton = new JoystickButton(rightJoystick, Ports.VERT_RAISE_BUTTON);
-	public static Button vertLowerButton = new JoystickButton(rightJoystick, Ports.VERT_LOWER_BUTTON);
-	public static Button vertOverrideButton = new JoystickButton(rightJoystick, Ports.VERT_OVERRIDE_BUTTON);
-	public static Button vertUnderrideButton = new JoystickButton(rightJoystick, Ports.VERT_UNDERRIDE_BUTTON);
-	public static Button vertLowerSlowOne = new JoystickButton(leftJoystick, Ports.VERT_LOWER_SLOW_ONE);
-	public static Button vertLowerSlowTwo = new JoystickButton(leftJoystick, Ports.VERT_LOWER_SLOW_TWO);
-	
-	public static Button cuberPickUpButton = new JoystickButton(leftJoystick, Ports.PICK_UP_BUTTON); 
-	public static Button cuberPickUpButtonTwo = new JoystickButton(rightJoystick, Ports.PICK_UP_BUTTON_TWO);
-	public static Button cuberExpelFastButton = new JoystickButton(leftJoystick, Ports.EXPEL_FAST_BUTTON); 
-	public static Button cuberExpelSlowButton = new JoystickButton(leftJoystick, Ports.EXPEL_SLOW_BUTTON);
-	public static Button cuberFlipDownButton = new JoystickButton(leftJoystick, Ports.FLIP_MANIPULATOR_DOWN_BUTTON);
-	public static Button cuberFlipUpButton = new JoystickButton(leftJoystick, Ports.FLIP_MANIPULATOR_UP_BUTTON);
-	public static Button enableUltrasonicOverride = new JoystickButton(leftJoystick, Ports.OVERRIDE_KEY_TWO);
-	public static Button disableUltrasonicOverride = new JoystickButton(leftJoystick, Ports.OVERRIDE_KEY_ONE);
-	
-	public static Button climbOnButton = new JoystickButton(rightJoystick, Ports.CLIMB_ON_BUTTON);
-	public static Button climbOffButton = new JoystickButton(rightJoystick, Ports.CLIMB_OFF_BUTTON);
-	
-	public static Button climbOverrideKeyOne = new JoystickButton(rightJoystick, Ports.OVERRIDE_KEY_ONE);
-	public static Button climbOverrideKeyTwo = new JoystickButton(rightJoystick, Ports.OVERRIDE_KEY_TWO);
-	
-	public static Button rampLowerButton = new JoystickButton(rightJoystick, Ports.RAMP_LOWER_BUTTON);
-	public static Button rampRaiseButton = new JoystickButton(rightJoystick, Ports.RAMP_RAISE_BUTTON);	
+	public Joystick rightJoystick = new Joystick(Ports.RIGHT_JOYSTICK);
+	public Button driveStartCommand = new JoystickButton(rightJoystick, Ports.DRIVE_START_BUTTON);
+	driveStartCommand.whenPressed(new DriveManualCommand());
 	
 	/**
 	 * Register button to command
