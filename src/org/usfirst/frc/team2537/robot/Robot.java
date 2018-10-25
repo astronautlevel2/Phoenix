@@ -39,7 +39,6 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		driveSys = new DriveSubsystem();
 		driveSys.initDefaultCommand();
-		driveSys.resetEncoders();
 	}
 
 	@Override
