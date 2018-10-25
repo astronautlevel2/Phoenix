@@ -10,8 +10,8 @@ import edu.wpi.first.wpilibj.command.Command;
 public class HumanInput {
 
 	public Joystick rightJoystick = new Joystick(Ports.RIGHT_JOYSTICK);
-	public Button driveStartCommand = new JoystickButton(rightJoystick, Ports.DRIVE_START_BUTTON);
-	driveStartCommand.whenPressed(new DriveManualCommand());
+	public Button driveStartButton = new JoystickButton(rightJoystick, Ports.DRIVE_START_BUTTON);
+	driveStartButton.whenPressed(new DriveManualCommand());
 	
 	/**
 	 * Register button to command
