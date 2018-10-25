@@ -40,33 +40,6 @@ public class Robot extends IterativeRobot {
 		driveSys = new DriveSubsystem();
 		driveSys.initDefaultCommand();
 		driveSys.resetEncoders();
-
-		smartDashboard = new SmartDashboard();
-		Navx.getInstance().reset();
-
-		vertSys = new VertSubsystem();
-		vertSys.registerButtons();
-		vertSys.initDefaultCommand();
-
-		climbSys = new ClimbSubsystem();
-		climbSys.registerButtons();
-
-		rampSys = new RampSubsystem();
-		rampSys.registerButtons();
-
-		cuberSys = new CuberSubsystem();
-		cuberSys.registerButtons();
-
-		visionSerial = new VisionInput();
-		visionSerial.initDefaultCommand();
-		
-		cameras = new Cameras();
-		cameras.start();
-
-//		pdp = new PowerDistributionPanel();
-
-		autoChooser = new AutoChooser();
-		SmartDashboard.putNumber("Delay", 0);
 	}
 
 	@Override
