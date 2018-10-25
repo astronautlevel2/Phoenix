@@ -1,22 +1,15 @@
 public class DriveCommand extends Command {
-	
 	public DriveCommand() {
 		requires(Robot.driveSys);
 	}
-	@Override
-	protected void initialize() {
-		// We don't need to initialize anything for this command
-	}
+	// We don't need to initialize anything for this command
+	protected void initialize() {}
 	
-	@Override 
 	protected void execute() {
 		Robot.driveSys.setMotors(.5); // sets both motors to 50% speed
 	}
-	
-	@Override
-	protected boolean isFinished() {
-		return false; // always runs
-	}
+
+	protected boolean isFinished() { return false; // always runs }
 	
 	protected void end() {
 		Robot.driveSys.setMotors(0);
